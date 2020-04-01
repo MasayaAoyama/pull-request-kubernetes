@@ -50,7 +50,7 @@ sh namespace-pattern/run.sh d610095 delete #(pr commit)
 * requirements
 	* create Application resource
 * limitations
-	* # of resources per Namespace
+	* number of resources per Namespace
 	* need to aggregate settings to common ConfigMap or Secret
 
 * spawn environment
