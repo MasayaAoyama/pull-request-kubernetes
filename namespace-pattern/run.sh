@@ -1,5 +1,9 @@
 #!/bin/bash
-BRANCH=master
+if [ -z "$1" ];
+  exit 1;
+fi
+
+BRANCH=$1
 
 cd $(dirname $0)
 kubectl create namespace $BRANCH
