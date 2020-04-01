@@ -11,7 +11,8 @@ spec:
     repoURL: https://github.com/MasayaAoyama/pull-request-kubernetes.git
     targetRevision: __BRANCH__
     path: manifests/app/
-    kustomize: {}
+    kustomize:
+      {} # image: masayaaoyama/demo-app:__BRANCH__
   destination:
     server: https://kubernetes.default.svc
     namespace: __BRANCH__

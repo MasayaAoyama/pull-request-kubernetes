@@ -12,6 +12,7 @@ spec:
     targetRevision: __BRANCH__
     path: manifests/app/
     kustomize:
+      # image: masayaaoyama/demo-app:__BRANCH__
       namePrefix: __BRANCH__-
   destination:
     server: https://kubernetes.default.svc
