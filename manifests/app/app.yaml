@@ -1,0 +1,46 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app
+  namespace: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      role: app
+  template:
+    metadata:
+      labels:
+        role: app
+    spec:
+      containers:
+      - name: app-container
+        image: masayaaoyama/demo-app:v1.0
+        imagePullPolicy: Always
+        env:
+        - name: DBHOST
+          value: mysql.test.svc.cluster.local
+        - name: DBPORT
+          value: "3306"
+        - name: DBUSER
+          value: myuser
+        - name: DBPASS
+          value: mypass
+        - name: DBNAME
+          value: mydb
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-app
+  namespace: test
+spec:
+  type: LoadBalancer
+  ports:
+    - name: "http-port"
+      protocol: "TCP"
+      port: 8080
+      targetPort: 8080
+  selector:
+    role: app
