@@ -1,3 +1,4 @@
+namespace: master
 bases:
 - ./manifest.yaml
 patches:
