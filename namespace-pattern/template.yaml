@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: namespace-cd-__BRANCH__
   namespace: argocd
+  labels:
+    branch: __BRANCH__
 spec:
   project: namespace-pattern
   source:
