@@ -5,7 +5,7 @@
 install argocd
 
 ```
-sh./argocd/init.sh
+sh ./argocd/init.sh
 ```
 
 open argocd dashboard
