@@ -4,7 +4,7 @@ metadata:
   name: cd-__BRANCH__
   namespace: argocd
 spec:
-  project: namespace-pattern
+  project: prefix-pattern
   source:
     repoURL: https://github.com/MasayaAoyama/pull-request-kubernetes.git
     targetRevision: __BRANCH__
@@ -12,7 +12,6 @@ spec:
     kustomize: {}
   destination:
     server: https://kubernetes.default.svc
-    namespace: __BRANCH__
   syncPolicy:
     automated:
       prune: true
