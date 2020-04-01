@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cd-__BRANCH__
+  name: namespace-cd-__BRANCH__
   namespace: argocd
 spec:
   project: namespace-pattern

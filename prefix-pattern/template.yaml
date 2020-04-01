@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cd-__BRANCH__
+  name: prefix-cd-__BRANCH__
   namespace: argocd
 spec:
   project: prefix-pattern
@@ -9,7 +9,8 @@ spec:
     repoURL: https://github.com/MasayaAoyama/pull-request-kubernetes.git
     targetRevision: __BRANCH__
     path: manifests/app/
-    kustomize: {}
+    kustomize:
+      nameSuffix: __BRANCH__
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
