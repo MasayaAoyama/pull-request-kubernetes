@@ -2010,7 +2010,7 @@ metadata:
     app.kubernetes.io/part-of: argocd
   name: argocd-cm
 data:
-  kustomize.buildOptions: --load_restrictor none
+    kustomize.buildOptions: --load_restrictor none
 ---
 apiVersion: v1
 kind: ConfigMap

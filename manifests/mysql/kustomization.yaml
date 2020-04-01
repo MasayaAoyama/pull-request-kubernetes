@@ -1,6 +1,6 @@
 bases:
 - ./manifest.yaml
 patches:
-- path: ../patch-clusterip.yaml
+- path: ./patch-clusterip.yaml
   target:
     kind: Service

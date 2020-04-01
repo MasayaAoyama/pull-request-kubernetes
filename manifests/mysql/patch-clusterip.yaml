@@ -1,0 +1,6 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: some-microservice
+spec:
+  type: ClusterIP
