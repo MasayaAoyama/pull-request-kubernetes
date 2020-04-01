@@ -9,11 +9,10 @@ spec:
     repoURL: https://github.com/MasayaAoyama/pull-request-kubernetes.git
     targetRevision: master
     path: manifests/app/
-    directory:
-      recurse: true
+    kustomize: {}
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: master
   syncPolicy:
     automated:
       prune: true
