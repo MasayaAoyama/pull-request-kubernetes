@@ -11,5 +11,5 @@ cd $(dirname $0)
 sed "s|__BRANCH__|${BRANCH}|g" template.yaml | kubectl ${OP} -f -
 
 if [ $OP == "create" ]; then
-  kubectl get svc -n test | grep ${BRANCH}
+  until kubectl get svc -n test | grep ${BRANCH}; do sleep 3; done
 fi

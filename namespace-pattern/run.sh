@@ -11,5 +11,5 @@ kubectl ${OP} namespace $BRANCH
 sed "s|__BRANCH__|${BRANCH}|g" template.yaml | kubectl ${OP} -f -
 
 if [ $OP == "create" ]; then
-  kubectl get svc -n $BRANCH
+  until kubectl get svc -n $BRANCH; do sleep 3; done
 fi
