@@ -36,7 +36,7 @@ metadata:
   name: demo-app
   namespace: test
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - name: "http-port"
       protocol: "TCP"
