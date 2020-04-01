@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/MasayaAoyama/pull-request-kubernetes.git
     targetRevision: master
-    path: manifests/
+    path: manifests/app/
     directory:
       recurse: true
   destination:
