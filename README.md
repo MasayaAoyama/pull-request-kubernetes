@@ -17,6 +17,12 @@ open http://localhost:8080
 
 # Pull request pattern
 
+* requirements
+	* create Namespace resource
+	* create Application resource
+* limitations
+	* need to aggregate settings to common ConfigMap or Secret
+
 * spawn environment
 
 ```
@@ -40,6 +46,12 @@ sh namespace-pattern/run.sh d610095 delete #(pr commit)
 ```
 
 # prefix name pattern
+
+* requirements
+	* create Application resource
+* limitations
+	* # of resources per Namespace
+	* need to aggregate settings to common ConfigMap or Secret
 
 * spawn environment
 
