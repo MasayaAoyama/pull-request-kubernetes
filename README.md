@@ -8,6 +8,12 @@ install argocd
 sh./argocd/init.sh
 ```
 
+open argocd dashboard
+
+```
+kubectl -n argocd port-forward svc/argocd-server 8080:80
+```
+
 # Pull request pattern
 
 ```
