@@ -5,7 +5,11 @@ if [ -z "$1" ]; then
 fi
 
 BRANCH=$1
+OP=${2:-create}
 
 cd $(dirname $0)
-sed "s|__BRANCH__|${BRANCH}|g" template.yaml | kubectl apply -f -
+sed "s|__BRANCH__|${BRANCH}|g" template.yaml | kubectl ${OP} -f -
 
+if [ $OP == "create" ]; then
+  kubectl get svc -n test | grep ${BRANCH}
+fi
