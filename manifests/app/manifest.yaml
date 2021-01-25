@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: app-container
-        image: masayaaoyama/demo-app:v1.0
+        image: masayaaoyama/demo-app:v2.0
         imagePullPolicy: Always
         env:
         - name: DBHOST
